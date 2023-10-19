@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles.css">
     <title>Kantinenbuchungen</title>
 </head>
@@ -23,7 +24,7 @@
                     </div>
                     <div class="row">
                         <div class= "col-4 col-lg-6 grid">
-                            <button type="button" class="btn food">Getränk 1</button>
+                            <button type="button" class="btn food" onclick= handleClick1()>Getränk 1</button>
                             <button type="button" class="btn food">Getränk 2</button>
                             <button type="button" class="btn food">Getränk 3</button>
                             <button type="button" class="btn food">Getränk 4</button>
@@ -50,7 +51,8 @@
                                 </div>  
                             </div>
                         </div>
-                        <div id="row right-up-middle">
+                        <div id="row right-up-middle g">
+                            <p id="drink1"></p>
                         </div>
                         <div class="row right-up-row" id="right-up-3">
                             <div id="right-up-4">
@@ -83,6 +85,6 @@
             </div>
         </div>
     </div>
-    <script src="bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>
