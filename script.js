@@ -1,4 +1,5 @@
-
+function handleClick1() {
+// fetch data
 let http = new XMLHttpRequest();
 
 
@@ -6,6 +7,8 @@ http.open('get', 'data.json', true);
 
 
 http.send();
+
+
 
 
 http.onload = function(){
@@ -29,6 +32,7 @@ http.onload = function(){
     document.querySelector(".data").innerHTML = output;
   }
 }
+}
 
 
 
@@ -39,6 +43,12 @@ http.onload = function(){
 
 
 
+// drinksEl.innerHTML = drinksObj.drink[0].artikel + " " + drinksObj.drink[0].preis;
+
+
+
+
+// const drinksEl = document.getElementById('artikel');
 
 
 
@@ -48,10 +58,6 @@ http.onload = function(){
 
 
 
-
-
-// const drinksObj = JSON.parse(drinks);
-// const drinksEl = document.getElementById('drink1');
 
 // function handleClick1() {
 //   drinksEl.innerHTML = drinksObj.drink[0].artikel + " " + drinksObj.drink[0].preis;
@@ -60,23 +66,15 @@ http.onload = function(){
 // drinksEl.addEventListener('click', handleClick1);
 
 
-// fetch data from json
-// function handleClick1() {
-//   fetch('./Data.json')
-// .then(response => response.json())
-// .then(responseJson => {
 
-//   for (let {drinksObj} of responseJson) {
-//     const drinksOrder = document.createElement('p');
-//     drinksOrder.innertext = drinksObj;
-//     drinksEl.append(drinksOrder);
-//   }  
-// })
-// }
+// for (let {drinksObj} of responseJson) {
+//   const drinksOrder = document.createElement('p');
+//   drinksOrder.innertext = drinksObj;
+//   drinksEl.append(drinksOrder);
+// }  
 
 
 
-// Getränke
 // const target = document.querySelector('food');
 
 
