@@ -1,0 +1,39 @@
+
+[
+    {
+        "artikel": "Getränk 1", 
+        "preis":"1,19€"
+    },
+    {
+        "artikel": "Getränk 2", 
+        "preis":"1,20€"
+    },
+    {
+        "artikel": "Getränk 3", 
+        "preis":"2,06€"
+    },
+    {
+        "artikel": "Getränk 4", 
+        "preis":"3,58€"
+    },
+    {
+        "artikel": "Getränk 5", 
+        "preis":"1,39€"
+    },
+    {
+        "artikel": "Getränk 6", 
+        "preis":"1,24€"
+    },
+    {
+        "artikel": "Getränk 7", 
+        "preis":"0,89€"
+    },
+    {
+        "artikel": "Getränk 8", 
+        "preis":"3,37€"
+    },
+    {
+        "artikel": "Getränk 9", 
+        "preis":"1,05€"
+    }
+]    
