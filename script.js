@@ -20,14 +20,17 @@ http.onload = function(){
     let output = "";
 
 
-    for(let item of data){
-      output += `
+      output = `
         <div class="data">
-          <p>${item.artikel}</p>
-          <p>${item.preis}</p>
+          <table>
+            <tr>
+              <td>${data[0].artikel}</td>
+              <td>${data[0].preis}</td>
+            </tr>
+          </table>
         </div>
       `;
-    } 
+    
 
     document.querySelector(".data").innerHTML = output;
   }
