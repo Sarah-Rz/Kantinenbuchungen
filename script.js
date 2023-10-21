@@ -26,14 +26,10 @@ http.onload = function(){
 
 
       output += `
-        <div class="data">
-          <table>
-            <tr>
-              <td>${data[0].artikel}</td>
-              <td>${data[0].preis}</td>
-            </tr>
-          </table>
-        </div>
+      <div class="data">
+          ${data[0].artikel}
+          ${data[0].preis}
+      </div>
       `;
     
 
@@ -53,18 +49,14 @@ http.onload = function(){
     let output = "";
       output += `
         <div class="data">
-          <table>
-            <tr>
-              <td>${data[1].artikel}</td>
-              <td>${data[1].preis}</td>
-            </tr>
-          </table>
+          ${data[1].artikel}
+          ${data[1].preis}
         </div>
       `;
     document.querySelector(".data").innerHTML += output;
   }
 }
-}
+};
 
 // Getränk 3
 function handleClick3() {
@@ -76,13 +68,9 @@ http.onload = function(){
     let data = JSON.parse(this.responseText);
     let output = "";
       output += `
-        <div class="data">
-          <table>
-            <tr>
-              <td>${data[2].artikel}</td>
-              <td>${data[2].preis}</td>
-            </tr>
-          </table>
+       <div class="data">
+          ${data[2].artikel}
+          ${data[2].preis}
         </div>
       `;
     document.querySelector(".data").innerHTML += output;
@@ -101,12 +89,8 @@ http.onload = function(){
     let output = "";
       output += `
         <div class="data">
-          <table>
-            <tr>
-              <td>${data[3].artikel}</td>
-              <td>${data[3].preis}</td>
-            </tr>
-          </table>
+          ${data[3].artikel}
+          ${data[3].preis}
         </div>
       `;
     document.querySelector(".data").innerHTML += output;
@@ -125,12 +109,8 @@ http.onload = function(){
     let output = "";
       output += `
         <div class="data">
-          <table>
-            <tr>
-              <td>${data[4].artikel}</td>
-              <td>${data[4].preis}</td>
-            </tr>
-          </table>
+          ${data[4].artikel}
+          ${data[4].preis}
         </div>
       `;
     document.querySelector(".data").innerHTML += output;
@@ -149,12 +129,8 @@ http.onload = function(){
     let output = "";
       output += `
         <div class="data">
-          <table>
-            <tr>
-              <td>${data[5].artikel}</td>
-              <td>${data[5].preis}</td>
-            </tr>
-          </table>
+          ${data[5].artikel}
+          ${data[5].preis}
         </div>
       `;
     document.querySelector(".data").innerHTML += output;
@@ -173,12 +149,8 @@ http.onload = function(){
     let output = "";
       output += `
         <div class="data">
-          <table>
-            <tr>
-              <td>${data[6].artikel}</td>
-              <td>${data[6].preis}</td>
-            </tr>
-          </table>
+          ${data[6].artikel}
+          ${data[6].preis}
         </div>
       `;
     document.querySelector(".data").innerHTML += output;
@@ -197,12 +169,8 @@ http.onload = function(){
     let output = "";
       output += `
         <div class="data">
-          <table>
-            <tr>
-              <td>${data[7].artikel}</td>
-              <td>${data[7].preis}</td>
-            </tr>
-          </table>
+          ${data[7].artikel}
+          ${data[7].preis}
         </div>
       `;
     document.querySelector(".data").innerHTML += output;
@@ -221,12 +189,8 @@ http.onload = function(){
     let output = "";
       output += `
         <div class="data">
-          <table>
-            <tr>
-              <td>${data[8].artikel}</td>
-              <td>${data[8].preis}</td>
-            </tr>
-          </table>
+          ${data[8].artikel}
+          ${data[8].preis}
         </div>
       `;
     document.querySelector(".data").innerHTML += output;

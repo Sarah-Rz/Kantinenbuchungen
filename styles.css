@@ -87,7 +87,23 @@
 }
 
 #right-up-2 {
+    width: 100%;
     height: 66%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* .data {
+display: grid;
+grid-template-columns: 90px 80px;
+grid-template-rows: 1fr;
+} */
+
+
+.grid-count-price {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
 }
 
 #right-up-3 {
@@ -103,7 +119,7 @@
 
 .grid-2 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
 
