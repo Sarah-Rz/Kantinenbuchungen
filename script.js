@@ -236,7 +236,7 @@ http.onload = function(){
 
 // delete all datas
 del = () => {
-  handleEl.innerHTML = " ";
+  handleEl.innerText = " ";
 }
 
 
