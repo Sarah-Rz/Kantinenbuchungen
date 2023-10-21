@@ -144,7 +144,7 @@
     background-color: rgb(184, 184, 177);
 }
 
-#delete {
+#del {
     background-color: red;
     grid-area: delete;
 }

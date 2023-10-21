@@ -1,3 +1,7 @@
+// data from right-up the App
+let handleEl = document.getElementById("data_save");
+
+
 // Getränk 1
 function handleClick1() {
 // fetch data
@@ -230,6 +234,10 @@ http.onload = function(){
 }
 }
 
+// delete all datas
+del = () => {
+  handleEl.innerHTML = " ";
+}
 
 
 
@@ -238,39 +246,5 @@ http.onload = function(){
 
 
 
-
-// drinksEl.innerHTML = drinksObj.drink[0].artikel + " " + drinksObj.drink[0].preis;
-
-
-
-
-// const drinksEl = document.getElementById('artikel');
-
-
-
-
-
-
-
-
-
-
-// function handleClick1() {
-//   drinksEl.innerHTML = drinksObj.drink[0].artikel + " " + drinksObj.drink[0].preis;
-// }
-
-// drinksEl.addEventListener('click', handleClick1);
-
-
-
-// for (let {drinksObj} of responseJson) {
-//   const drinksOrder = document.createElement('p');
-//   drinksOrder.innertext = drinksObj;
-//   drinksEl.append(drinksOrder);
-// }  
-
-
-
-// const target = document.querySelector('food');
 
 
