@@ -27,15 +27,15 @@
                     </div>
                     <div class="row">
                         <div class= "col-4 col-lg-6 grid" id="food_drinks">
-                            <button type="button" class="btn food" onclick= handleClick1()>Getränk 1</button>
-                            <button type="button" class="btn food" onclick= handleClick2()>Getränk 2</button>
-                            <button type="button" class="btn food" onclick= handleClick3()>Getränk 3</button>
-                            <button type="button" class="btn food" onclick= handleClick4()>Getränk 4</button>
-                            <button type="button" class="btn food" onclick= handleClick5()>Getränk 5</button>
-                            <button type="button" class="btn food" onclick= handleClick6()>Getränk 6</button>
-                            <button type="button" class="btn food" onclick= handleClick7()>Getränk 7</button>
-                            <button type="button" class="btn food" onclick= handleClick8()>Getränk 8</button>
-                            <button type="button" class="btn food" onclick= handleClick9()>Getränk 9</button>
+                            <button type="button" class="btn food" id="d-1" onclick= handleClick1()>Getränk 1</button>
+                            <button type="button" class="btn food" id="d-2" onclick= handleClick2()>Getränk 2</button>
+                            <button type="button" class="btn food" id="d-3" onclick= handleClick3()>Getränk 3</button>
+                            <button type="button" class="btn food" id="d-4" onclick= handleClick4()>Getränk 4</button>
+                            <button type="button" class="btn food" id="d-5" onclick= handleClick5()>Getränk 5</button>
+                            <button type="button" class="btn food" id="d-6" onclick= handleClick6()>Getränk 6</button>
+                            <button type="button" class="btn food" id="d-7" onclick= handleClick7()>Getränk 7</button>
+                            <button type="button" class="btn food" id="d-8" onclick= handleClick8()>Getränk 8</button>
+                            <button type="button" class="btn food" id="d-9" onclick= handleClick9()>Getränk 9</button>
                         </div>
                 </div>
                 </div>
@@ -56,14 +56,20 @@
                         </div>
                         <div class="row" id="right-up-2">
                             <!-- add id=data_save for delete Button -->
-                            <div class="data" id="data_save">
+                            <div id="data_save">
                                 <div class="row">
                                     <div class="col-lg-6 data-1">
-                                        <div id="data-1"></div>
+                                        <div>
+                                            <p class="data" id="data-1"></p>
+                                        </div>
                                     </div>
                                     <div class="col-lg-6 grid-count-price data-2">
-                                        <div id="data-2"></div>
-                                        <div id="data-3"></div>
+                                        <div>
+                                            <p id="countNum"></p>
+                                        </div>
+                                        <div>
+                                            <p class="data" id="data-3"></p>
+                                        </div>
                                     </div> 
                                 </div>
                             </div>
@@ -71,7 +77,7 @@
                         <div class="row r-up right-up-row" id="right-up-3">
                             <div id="right-up-4">
                                 <p class="sum">Summe</p>
-                                <p class="prise">7,03€</p>
+                                <p class="prise">€</p>
                             </div>
                         </div>
                     </div>

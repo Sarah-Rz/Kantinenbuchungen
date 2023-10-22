@@ -1,9 +1,21 @@
 // data from right-up the App
 let handleEl = document.getElementById("data_save");
 
+const btnChoose = document.querySelectorAll(".food");
+
+let count = 0;
+let countNum = document.getElementById('countNum');
+
 
 // Getränk 1
 function handleClick1() {
+ 
+  count = count + 1;
+  countNum.innerHTML = count;  
+
+  document.querySelector("#countNum").innerHTML = count;
+
+
 // fetch data
 let http = new XMLHttpRequest();
 
@@ -16,6 +28,7 @@ http.send();
 
 
 
+
 http.onload = function(){
   
   if(this.readyState == 4 && this.status == 200){
@@ -24,19 +37,30 @@ http.onload = function(){
 
     let output = "";
 
-
-      output += `
-      <div class="data">
+    output += `
+        <div id="data-1">
           ${data[0].artikel}
           ${data[0].preis}
-      </div>
-      `;
-    
-
+        </div>
+      `
     document.querySelector(".data").innerHTML += output;
-  }
+
+
+  //   let sum = 0;    
+  //   let price = data[0].preis;
+  //   sum = sum + parseFloat(price);
+  //   countsNum = count.push(sum)
+  //   ;
+  
+  // console.log(typeof countsNum, countsNum);
+
+}
+  
 }
 }
+
+
+
 
 // Getränk 2
 function handleClick2() {
@@ -200,7 +224,8 @@ http.onload = function(){
 
 // delete all datas
 del = () => {
-  handleEl.innerText = " ";
+  handleEl.innerText = " "
+  count = 0;
 }
 
 
