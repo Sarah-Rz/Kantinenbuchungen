@@ -5,8 +5,8 @@
     font-family: 'Heebo', sans-serif;
  }
 .container {
-    width: 102vh;
-    height:68vh;
+    width: 128vh;
+    height:70vh;
     border: 3px solid black;
     margin: 5rem auto;
     background: linear-gradient(to left, #e2dddd 50%, #ffffff 50%);
@@ -169,4 +169,12 @@ grid-template-rows: 1fr;
     background-color: rgb(115, 233, 47);
     font-size: 25px;
     grid-area: done;
+}
+
+/* Responsive Container */
+@media only screen and (max-width: 1400px) {
+    .container {
+        width: 110vh;
+        height:74vh;
+    }
 }

@@ -6,6 +6,8 @@ const btnChoose = document.querySelectorAll(".food");
 let count = 0;
 let countNum = document.getElementById('countNum');
 
+let price = document.getElementById('price');
+
 
 // Getränk 1
 function handleClick1() {
@@ -26,9 +28,6 @@ http.open('get', 'data.json', true);
 http.send();
 
 
-
-
-
 http.onload = function(){
   
   if(this.readyState == 4 && this.status == 200){
@@ -38,14 +37,14 @@ http.onload = function(){
     let output = "";
 
     output += `
-        <div id="data-1">
+        <div class="data">
           ${data[0].artikel}
-          ${data[0].preis}
         </div>
       `
     document.querySelector(".data").innerHTML += output;
 
 
+    
   //   let sum = 0;    
   //   let price = data[0].preis;
   //   sum = sum + parseFloat(price);
