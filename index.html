@@ -65,7 +65,7 @@
                                     </div>
                                     <div class="col-lg-6 grid-count-price data-2">
                                         <div>
-                                            <p id="countNum"></p>
+                                            <p class="dataCount" id="countNum"></p>
                                         </div>
                                         <div>
                                             <p class="data" id="price"></p>
@@ -97,7 +97,14 @@
                                 <button type="button" class="btn btn-num doublezero">00</button>
                                 <button type="button" class="btn btn-num c" id="c">c</button>
                                 <button type="button" class="btn btn-num delete" id="del" onclick= del()>X<br>Stornieren</button>
-                                <button type="button" class="btn btn-num done" id="done">Fertig</button>
+                                <button type="submit" class="btn btn-num done" id="done" onclick= openPopup()>Fertig</button>
+                            </div>
+                            <!-- popup message -->
+                            <div class="popup" id="popup">
+                                <h2>Wollen Sie wirklich, dass dieser Bestellung aufgegeben wird?</h2>
+                                <p>Gesamtsumme: 19.69€</p>
+                                <button type="button" class="btn btn-ok"><a href="./">Ja</a></button>
+                                <button type="button" class="btn btn-cancle" onclick= closePopup()>Nein</button>
                             </div>
                         </div>
                     </div>
