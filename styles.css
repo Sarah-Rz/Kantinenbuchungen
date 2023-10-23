@@ -5,7 +5,7 @@
     font-family: 'Heebo', sans-serif;
  }
 .container {
-    width: 128vh;
+    width: 800px;
     height:70vh;
     border: 3px solid black;
     margin: 5rem auto;
@@ -24,15 +24,31 @@
 }
 
 .nav-bt {
-    padding: 1px 10px;
+    padding: 1px 5px;
     margin-bottom: 0.4rem;
     background-color: rgb(212, 212, 205);
-
 }
+.nav-row > button {
+    border-radius: 0;
+    width: 80px;
+}
+
 .nav-row > button > a {
     text-decoration: none;
     color: #333;
 }
+.nav-row > button:hover {
+    background-color: rgb(115, 233, 47);
+    color: #fff;
+    transition: 0.2s;
+}
+.nav-row > button > a:hover {
+    text-decoration: none;
+    color: #fff;
+    transition: 0.2s;
+}
+
+
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -42,12 +58,13 @@
 }
 
 .food {
+    width: 98px;
+    height:98px;
     margin: 0.5rem 0.4rem;
-    padding: 1.25rem 1rem;
+    padding: 1.25rem 0.25rem;
     border-radius: 10px;
-    box-shadow: 0 0 4px rgb(192, 185, 169);
+    box-shadow: 0 2px 4px rgb(143, 138, 126);
     background-color: rgb(235, 199, 82);
-
 }
 
 .right {
@@ -60,8 +77,8 @@
 }
 
 .right-up {
-    width: 93%;
-    height: 50%;
+    width: 300px;
+    height: 200px;
     background-color: white;
     border-radius: 13px;
     margin: 0.5rem 0.5rem;
@@ -69,11 +86,12 @@
 }
 
 .right-down {
-    width: 93%;
-    height: 50%;
+    width: 300px;
+    height: 200px;
     background-color: white;
     border-radius: 13px;
-    margin: 0.2rem 0.5rem;
+    padding: 1rem auto;
+    margin: 0.5rem 0.5rem;
     box-shadow: 0 0 4px rgb(122, 117, 117);
 }
 
@@ -224,7 +242,6 @@ grid-template-rows: 1fr;
 /* Responsive Container */
 @media only screen and (max-width: 1400px) {
     .container {
-        width: 110vh;
-        height:74vh;
+        width: 700px;
     }
 }
