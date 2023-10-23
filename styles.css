@@ -29,6 +29,10 @@
     background-color: rgb(212, 212, 205);
 
 }
+.nav-row > button > a {
+    text-decoration: none;
+    color: #333;
+}
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -208,11 +212,12 @@ grid-template-rows: 1fr;
     background-color: rgb(238, 106, 17);
     color:#fff
 }
-a {
+
+.popup > button > a {
    text-decoration: none;
    color: #fff;
 }
-a:hover {
+.popup > button > a:hover {
     color: #333;
 }
 
