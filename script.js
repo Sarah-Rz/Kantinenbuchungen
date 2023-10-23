@@ -2,6 +2,8 @@
 const foodsEl = document.querySelector(".foods");
 // ORDERED FOODS (right side)
 const orderedFoodsEl = document.querySelector(".ordered-foods");
+const sumPriceEl = document.querySelector(".sum-price");
+const sumPopupEl = document.querySelector(".sumPopup");
 
 // RENDER FOODS
 function renderProducts() {
@@ -59,7 +61,30 @@ updateOrder();
 // UPDATE ORDER
 function updateOrder() {
   renderOrderedFoods();
-  // renderSumPrice()
+  renderSumPrice();
+}
+
+//CALCULATE AND RENDER TOTAL PRICE
+function renderSumPrice() {
+
+  let http = new XMLHttpRequest();
+  http.open('get', 'data.json', true);
+  http.send();
+  http.onload = function(){
+  if(this.readyState == 4 && this.status == 200){
+    let data = JSON.parse(this.responseText);
+
+    let sumPrice = 0;
+
+    order.forEach((food) => {
+      sumPrice += food.price * food.numberOfFoods;
+   });
+
+    //to fix numbers to show just two numbers after "." (decimal numbers), using .toFixed()
+    sumPriceEl.innerHTML = `${sumPrice.toFixed(2)}€`;
+    sumPopupEl.innerHTML = `Gesamtsumme: ${sumPrice.toFixed(2)}€`;
+  }
+}   
 }
 
 // RENDER ORDERED FOODS
@@ -118,12 +143,15 @@ function changeNumberOfFoods(action, id) {
 }
 
 
-// delete all datas
+
+
+// DELETE ALL DATAS
 del = () => {
-  orderedFoodsEl.innerText = " "
+  orderedFoodsEl.innerText = " ",
+  sumPriceEl.innerText = "0€"
 }
 
-// popup message
+// POPUP MESSAGE
 let popup = document.getElementById("popup")
 
 function openPopup() {

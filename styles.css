@@ -38,13 +38,13 @@
     color: #333;
 }
 .nav-row > button:hover {
-    background-color: rgb(115, 233, 47);
-    color: #fff;
+    background-color: rgb(236, 190, 40);
+    color: #333;
     transition: 0.2s;
 }
 .nav-row > button > a:hover {
     text-decoration: none;
-    color: #fff;
+    color: #333;
     transition: 0.2s;
 }
 
@@ -66,7 +66,9 @@
     box-shadow: 0 2px 4px rgb(143, 138, 126);
     background-color: rgb(235, 199, 82);
 }
-
+.food:hover {
+    background-color: rgb(236, 190, 40);
+}
 .right {
     height: 100%; 
     margin: 0 0rem;
@@ -114,13 +116,6 @@
     margin: 0 auto;
     padding: 0;
 }
-
-/* .data {
-display: grid;
-grid-template-columns: 90px 80px;
-grid-template-rows: 1fr;
-} */
-
 
 .grid-count-price {
     display: flex;
@@ -170,21 +165,41 @@ grid-template-rows: 1fr;
     align-items: center;
     padding: 3px 5px;
     margin: 2px 4px;
-    color: white;
+    color: #fff;
     background-color: rgb(117, 117, 114);
     border: none;
     border-radius: 10px;
     font-size: 13px;
     font-weight: bold;
 }
+.btn-num:hover {
+    background-color: rgb(168, 168, 161);
+    color:#fff
+
+}
 
 #c {
     background-color: rgb(184, 184, 177);
+}
+#c:hover {
+    background-color: rgb(90, 90, 88);
+    color: #fff;
 }
 
 #del {
     background-color: red;
     grid-area: delete;
+}
+#del:hover {
+    background-color: rgb(190, 6, 6);
+}
+
+.del{
+    text-decoration: none;
+    color: #fff;
+}
+.del:hover {
+    color: #fff;
 }
 
 #done {
@@ -192,11 +207,15 @@ grid-template-rows: 1fr;
     font-size: 25px;
     grid-area: done;
 }
+#done:hover {
+    background-color: rgb(78, 180, 19);
+    color: #fff;
+}
 
 /* popup message */
 .popup {
     width: 400px;
-    background-color: rgb(212, 212, 205);
+    background-color: rgb(243, 243, 231);
     border-radius: 6px;
     position: absolute;
     top: 50%;
@@ -224,10 +243,18 @@ grid-template-rows: 1fr;
 }
 .btn-ok {
     background-color: rgb(115, 233, 47);
-    color:#fff
+    color:#fff;
+}
+.btn-ok:hover {
+    background-color: rgb(67, 167, 9);
+    color:#fff;
 }
 .btn-cancle {
-    background-color: rgb(238, 106, 17);
+    background-color: rgb(248, 149, 20);
+    color:#fff
+}
+.btn-cancle:hover {
+    background-color: rgb(221, 94, 10);
     color:#fff
 }
 
@@ -236,7 +263,7 @@ grid-template-rows: 1fr;
    color: #fff;
 }
 .popup > button > a:hover {
-    color: #333;
+    color: #fff;
 }
 
 /* Responsive Container */

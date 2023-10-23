@@ -55,7 +55,7 @@
                         <div class="row r-up right-up-row" id="right-up-3">
                             <div id="right-up-4">
                                 <p class="sum">Summe</p>
-                                <p class="prise">12.90€</p>
+                                <p class="sum-price">0€</p>
                             </div>
                         </div>
                     </div>
@@ -74,14 +74,14 @@
                                 <button type="button" class="btn btn-num zero">0</button>
                                 <button type="button" class="btn btn-num doublezero">00</button>
                                 <button type="button" class="btn btn-num c" id="c">c</button>
-                                <button type="button" class="btn btn-num delete" id="del" onclick= del()>X<br>Stornieren</button>
+                                <button type="button" class="btn btn-num delete" id="del" onclick= del()><a class="del" href="">X<br>Stornieren</a></button>
                                 <button type="submit" class="btn btn-num done" id="done" onclick= openPopup()>Fertig</button>
                             </div>
                             <!-- popup message -->
                             <div class="popup" id="popup">
                                 <h2>Wollen Sie wirklich, dass dieser Bestellung aufgegeben wird?</h2>
-                                <p>Gesamtsumme: 19.69€</p>
-                                <button type="button" class="btn btn-ok"><a href="./">Ja</a></button>
+                                <p class="sumPopup">Gesamtsumme: 0€</p>
+                                <button type="button" class="btn btn-ok"><a href="">Ja</a></button>
                                 <button type="button" class="btn btn-cancle" onclick= closePopup()>Nein</button>
                             </div>
                         </div>
