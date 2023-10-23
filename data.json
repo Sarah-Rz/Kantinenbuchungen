@@ -1,39 +1,57 @@
 
 [
     {
-        "artikel": "Getränk 1", 
-        "preis":"1.19"
-    },
+        "id": 1,
+        "name": "Getränk 1", 
+        "price":"1.19",
+        "amount": "9"
+    },  
     {
-        "artikel": "Getränk 2", 
-        "preis":"1.20"
-    },
+        "id": 2,
+        "name": "Getränk 2", 
+        "price":"1.20",
+        "amount": "9"
+    },  
+    {   
+        "id": 3,
+        "name": "Getränk 3", 
+        "price":"2.06",
+        "amount": "9"
+    },  
     {
-        "artikel": "Getränk 3", 
-        "preis":"2.06"
-    },
+        "id": 4,
+        "name": "Getränk 4", 
+        "price":"3.58",
+        "amount": "9"
+    },  
     {
-        "artikel": "Getränk 4", 
-        "preis":"3.58"
-    },
+        "id": 5,
+        "name": "Getränk 5", 
+        "price":"1.39",
+        "amount": "9"
+    },  
     {
-        "artikel": "Getränk 5", 
-        "preis":"1.39"
-    },
+        "id": 6,
+        "name": "Getränk 6", 
+        "price":"1.24",
+        "amount": "9"
+    },  
     {
-        "artikel": "Getränk 6", 
-        "preis":"1.24"
-    },
+        "id": 7,
+        "name": "Getränk 7", 
+        "price":"0.89",
+        "amount": "9"
+    },  
     {
-        "artikel": "Getränk 7", 
-        "preis":"0.89"
-    },
+        "id": 8,
+        "name": "Getränk 8", 
+        "price":"3.37",
+        "amount": "9"
+    },  
     {
-        "artikel": "Getränk 8", 
-        "preis":"3.37"
-    },
-    {
-        "artikel": "Getränk 9", 
-        "preis":"1.05"
-    }
+        "id": 9,
+        "name": "Getränk 9", 
+        "price":"1.05",
+        "amount": "9"
+    }   
 ]    
