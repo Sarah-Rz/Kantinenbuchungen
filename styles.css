@@ -170,7 +170,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 3px 5px;
+    padding: 4.5px 14px;
     margin: 2px 4px;
     color: #fff;
     background-color: rgb(117, 117, 114);
@@ -196,6 +196,8 @@
 #del {
     background-color: red;
     grid-area: delete;
+    font-size: 15px;
+    padding: 2px;
 }
 #del:hover {
     background-color: rgb(190, 6, 6);
@@ -219,10 +221,10 @@
     color: #fff;
 }
 
-/* popup message */
+/* --------------------------- popup message -----------------------------------*/
 .popup {
-    width: 380px;
-    background-color: rgb(228, 228, 216);
+    width: 350px;
+    background-color: #e2dddd;
     border-radius: 8px;
     position: absolute;
     top: 50%;
@@ -243,14 +245,11 @@
 
 .popup h2 {
     font-size: 18px;
+    font-weight: bold;
 }
 .popup p {
     color: #333;
     font-weight: bold;
-}
-
-.food-popup {
-    color: rgb(15, 179, 69);
 }
 
 .btn-ok {
@@ -262,11 +261,11 @@
     color:#fff;
 }
 .btn-cancle {
-    background-color: rgb(248, 149, 20);
+    background-color: rgb(248, 92, 20);
     color:#fff
 }
 .btn-cancle:hover {
-    background-color: rgb(221, 94, 10);
+    background-color: rgb(211, 87, 5);
     color:#fff
 }
 
@@ -278,7 +277,7 @@
     color: #fff;
 }
 
-/* active Nav */
+/* ------------------------------------- active Nav -------------------------------------- */
 .activeNav {
     background-color: rgb(236, 190, 40);
     color: #333;

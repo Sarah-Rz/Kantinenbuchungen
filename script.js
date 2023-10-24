@@ -13,6 +13,8 @@ const sumPopupEl = document.querySelector(".sumPopup");
 // Add SELECTED FOODS TO POPUP
 const sumPopupItemEl = document.querySelector(".sumPopup-item");
 
+// CHANGE NUMBER TO SEVEN
+
 
 
 // RENDER FOODS
@@ -134,10 +136,22 @@ function renderOrderedFoods() {
       `
       // Add SELECTED FOODS TO POPUP
       sumPopupItemEl.innerHTML += `
+      <div class="row">
+      <div class="col-lg-6 col-6 data-1">
           <div>
               <p class="data" id="data-name">${food.name}</p>
           </div>
+      </div>
+      <div class="col-lg-6 col-6 grid-count-price data-2">
+          <div>
+              <p class="dataCount" id="countNum">${food.numberOfFoods}</p>
+          </div>
+          <div>
+              <p class="data" id="price">${food.price}€</p>
+          </div>
+      </div> 
     </div>`
+         
     })
    }    
   } 
