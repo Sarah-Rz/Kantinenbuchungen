@@ -103,7 +103,7 @@ function renderOrderedFoods() {
         <div class="row">
           <div class="col-lg-6 data-1">
               <div>
-                  <p class="data" id="data-1">${food.name}</p>
+                  <p class="data" id="data-name">${food.name}</p>
               </div>
           </div>
           <div class="col-lg-6 grid-count-price data-2">
@@ -143,8 +143,6 @@ function changeNumberOfFoods(action, id) {
 }
 
 
-
-
 // DELETE ALL DATAS
 del = () => {
   orderedFoodsEl.innerText = " ",
@@ -162,6 +160,23 @@ function closePopup() {
   popup.classList.remove("open-popup");
 }
 
+
+// ACTIVE NAVBAR
+const pathName = window.location.pathname;
+const pageName = pathName.split("/").pop();
+
+if(pageName ==="ice.html") {
+  document.querySelector(".eis").classList.add("activeNav");
+}
+if(pageName ==="food.html") {
+  document.querySelector(".essen").classList.add("activeNav");
+}
+if(pageName ==="breakfast.html") {
+  document.querySelector(".bf").classList.add("activeNav");
+}
+if(pageName ==="drinks.html") {
+  document.querySelector(".drink").classList.add("activeNav");
+}
 
 
 

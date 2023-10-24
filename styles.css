@@ -37,11 +37,7 @@
     text-decoration: none;
     color: #333;
 }
-.nav-row > button:hover {
-    background-color: rgb(236, 190, 40);
-    color: #333;
-    transition: 0.2s;
-}
+
 .nav-row > button > a:hover {
     text-decoration: none;
     color: #333;
@@ -265,6 +261,14 @@
 .popup > button > a:hover {
     color: #fff;
 }
+
+/* active Nav */
+.activeNav {
+    background-color: rgb(236, 190, 40);
+    color: #333;
+    transition: 0.2s;
+}
+
 
 /* Responsive Container */
 @media only screen and (max-width: 1400px) {

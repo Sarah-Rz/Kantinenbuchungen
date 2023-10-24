@@ -19,23 +19,15 @@
                 <div class="left">
                     <div class="row nav">
                         <div class="nav-row">
-                            <button type="button" class="btn border-0 nav-bt"><a href="essen.html">Essen</a></button>
-                            <button type="button" class="btn border-0 nav-bt"><a href="getränke.html">Getränke</a></button>
-                            <button type="button" class="btn border-0 nav-bt"><a href="eis.html">Eis</a></button>
-                            <button type="button" class="btn border-0 nav-bt"><a href="frühstück.html">Frühstück</a></button>
+                            <button type="button" class="btn border-0 nav-bt essen"><a href="food.html">Essen</a></button>
+                            <button type="button" class="btn border-0 nav-bt drink"><a href="drinks.html">Getränke</a></button>
+                            <button type="button" class="btn border-0 nav-bt eis"><a href="ice.html">Eis</a></button>
+                            <button type="button" class="btn border-0 nav-bt bf"><a href="breakfast.html">Frühstück</a></button>
                         </div>
                     </div>
                     <div class="row">
-                        <div class= "col-4 col-lg-6 grid" id="food_drinks">
-                            <button type="button" class="btn food" id="d-1" onclick= handleClickEi1()>Eis 1</button>
-                            <button type="button" class="btn food" id="d-2" onclick= handleClickEi2()>Eis 2</button>
-                            <button type="button" class="btn food" id="d-3" onclick= handleClickEi3()>Eis 3</button>
-                            <button type="button" class="btn food" id="d-4" onclick= handleClickEi4()>Eis 4</button>
-                            <button type="button" class="btn food" id="d-5" onclick= handleClickEi5()>Eis 5</button>
-                            <button type="button" class="btn food" id="d-6" onclick= handleClickEi6()>Eis 6</button>
-                            <button type="button" class="btn food" id="d-7" onclick= handleClickEi7()>Eis 7</button>
-                            <button type="button" class="btn food" id="d-8" onclick= handleClickEi8()>Eis 8</button>
-                            <button type="button" class="btn food" id="d-9" onclick= handleClickEi9()>Eis 9</button>
+                        <div class= "col-4 col-lg-6 grid foods" id="food_drinks">
+                            <!-- render foods here -->
                         </div>
                 </div>
                 </div>
@@ -56,28 +48,14 @@
                         </div>
                         <div class="row" id="right-up-2">
                             <!-- add id=data_save for delete Button -->
-                            <div id="data_save">
-                                <div class="row">
-                                    <div class="col-lg-6 data-1">
-                                        <div>
-                                            <p class="data" id="data-1"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 grid-count-price data-2">
-                                        <div>
-                                            <p class="dataCount" id="countNum"></p>
-                                        </div>
-                                        <div>
-                                            <p class="data" id="price"></p>
-                                        </div>
-                                    </div> 
-                                </div>
+                            <div class="ordered-foods" id="data_save">
+                                <!-- render ordered foods here -->
                             </div>
                         </div>
                         <div class="row r-up right-up-row" id="right-up-3">
                             <div id="right-up-4">
                                 <p class="sum">Summe</p>
-                                <p class="prise">€</p>
+                                <p class="sum-price">0€</p>
                             </div>
                         </div>
                     </div>
@@ -96,14 +74,14 @@
                                 <button type="button" class="btn btn-num zero">0</button>
                                 <button type="button" class="btn btn-num doublezero">00</button>
                                 <button type="button" class="btn btn-num c" id="c">c</button>
-                                <button type="button" class="btn btn-num delete" id="del" onclick= del()>X<br>Stornieren</button>
+                                <button type="button" class="btn btn-num delete" id="del" onclick= del()><a class="del" href="">X<br>Stornieren</a></button>
                                 <button type="submit" class="btn btn-num done" id="done" onclick= openPopup()>Fertig</button>
                             </div>
                             <!-- popup message -->
                             <div class="popup" id="popup">
                                 <h2>Wollen Sie wirklich, dass dieser Bestellung aufgegeben wird?</h2>
-                                <p>Gesamtsumme: 19.69€</p>
-                                <button type="button" class="btn btn-ok"><a href="./">Ja</a></button>
+                                <p class="sumPopup">Gesamtsumme: 0€</p>
+                                <button type="button" class="btn btn-ok"><a href="">Ja</a></button>
                                 <button type="button" class="btn btn-cancle" onclick= closePopup()>Nein</button>
                             </div>
                         </div>
