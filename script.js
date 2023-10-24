@@ -161,6 +161,7 @@ function closePopup() {
 }
 
 
+
 // ACTIVE NAVBAR
 const pathName = window.location.pathname;
 const pageName = pathName.split("/").pop();
