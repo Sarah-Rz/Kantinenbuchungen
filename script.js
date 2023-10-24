@@ -1,9 +1,19 @@
 // SELECT FOODS BUTTON (left side)
 const foodsEl = document.querySelector(".foods");
+
 // ORDERED FOODS (right side)
 const orderedFoodsEl = document.querySelector(".ordered-foods");
+
+// TOTAL PRICE
 const sumPriceEl = document.querySelector(".sum-price");
+
+// GESAMTSUMME POPUP
 const sumPopupEl = document.querySelector(".sumPopup");
+
+// Add SELECTED FOODS TO POPUP
+const sumPopupItemEl = document.querySelector(".sumPopup-item");
+
+
 
 // RENDER FOODS
 function renderProducts() {
@@ -25,6 +35,7 @@ function renderProducts() {
 }
 }
 renderProducts();
+
 
 //ORDER ARRAY
 let order = [];
@@ -58,11 +69,13 @@ function addToOrder(id) {
 updateOrder();
 }
 
+
 // UPDATE ORDER
 function updateOrder() {
   renderOrderedFoods();
   renderSumPrice();
 }
+
 
 //CALCULATE AND RENDER TOTAL PRICE
 function renderSumPrice() {
@@ -87,6 +100,7 @@ function renderSumPrice() {
 }   
 }
 
+
 // RENDER ORDERED FOODS
 function renderOrderedFoods() {
    // fetch JSON
@@ -98,6 +112,8 @@ function renderOrderedFoods() {
      let data = JSON.parse(this.responseText);
 
      orderedFoodsEl.innerHTML = "";  //clear orders (order area), to prevent duplicate items
+     sumPopupItemEl.innerHTML = "";
+
      order.forEach((food) => {
       orderedFoodsEl.innerHTML += `
         <div class="row">
@@ -116,11 +132,18 @@ function renderOrderedFoods() {
           </div> 
         </div>
       `
+      // Add SELECTED FOODS TO POPUP
+      sumPopupItemEl.innerHTML += `
+          <div>
+              <p class="data" id="data-name">${food.name}</p>
+          </div>
+    </div>`
     })
    }    
   } 
   
 }
+
 
 //INCREASE THE NUMBER OF SELECTED FOODS
 function changeNumberOfFoods(action, id) {
@@ -148,6 +171,7 @@ del = () => {
   orderedFoodsEl.innerText = " ",
   sumPriceEl.innerText = "0€"
 }
+
 
 // POPUP MESSAGE
 let popup = document.getElementById("popup")

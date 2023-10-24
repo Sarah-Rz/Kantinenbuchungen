@@ -34,13 +34,14 @@
 }
 
 .nav-bt {
-    padding: 1px 5px;
+    padding: 1px 3px;
     margin-bottom: 0.4rem;
     background-color: rgb(212, 212, 205);
+    font-size: 15px;
 }
 .nav-row > button {
     border-radius: 0;
-    width: 80px;
+    width: 77px;
 }
 
 .nav-row > button > a {
@@ -220,16 +221,16 @@
 
 /* popup message */
 .popup {
-    width: 400px;
-    background-color: rgb(243, 243, 231);
-    border-radius: 6px;
+    width: 380px;
+    background-color: rgb(228, 228, 216);
+    border-radius: 8px;
     position: absolute;
     top: 50%;
     left: 50%;
     /* it will be at the Center of the Webpage first, and very small, hidden */
     transform: translate(-50%, -50%) scale(0.1);
     text-align: center;
-    padding: 10px 30px 30px;
+    padding: 15px 23px 25px;
     color: #333;
     visibility: hidden;
     transition: transform 0.4s;
@@ -247,6 +248,11 @@
     color: #333;
     font-weight: bold;
 }
+
+.food-popup {
+    color: rgb(15, 179, 69);
+}
+
 .btn-ok {
     background-color: rgb(115, 233, 47);
     color:#fff;
