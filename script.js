@@ -101,12 +101,12 @@ function renderOrderedFoods() {
      order.forEach((food) => {
       orderedFoodsEl.innerHTML += `
         <div class="row">
-          <div class="col-lg-6 data-1">
+          <div class="col-lg-6 col-6 data-1">
               <div>
                   <p class="data" id="data-name">${food.name}</p>
               </div>
           </div>
-          <div class="col-lg-6 grid-count-price data-2">
+          <div class="col-lg-6 col-6 grid-count-price data-2">
               <div>
                   <p class="dataCount" id="countNum">${food.numberOfFoods}</p>
               </div>
