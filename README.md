@@ -1,10 +1,7 @@
 Live Demo:
-# [Kantinenbuchungen App]( https://sarah-rz.github.io/Kantinenbuchungen/)
+# [Kantinenbuchungen App](https://sarah-rz.github.io/Kantinenbuchungen/)
 
 ## HOW I CREATED THIS APP:
-
-> - To view this file in Preview mode, right click on this README.md file and `Open Preview`
-<br><br>
 
 1. First, I started my code by creating the template of the app with HTML. And created the pages.
 <br><br>
