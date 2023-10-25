@@ -15,7 +15,8 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-6 col-md-6 col-lg-6">
+            <!------------------------------ left side ------------------------------------>
+            <div class="col-12 col-md-6 col-lg-6">
                 <div class="left">
                     <div class="row nav">
                         <div class="nav-row">
@@ -27,22 +28,24 @@
                     </div>
                     <div class="row">
                         <div class= "col-4 col-lg-6 grid" id="food_drinks">
-                            <button type="button" class="btn food" id="d-1">Frühstück 1</button>
-                            <button type="button" class="btn food" id="d-2">Frühstück 2</button>
-                            <button type="button" class="btn food" id="d-3">Frühstück 3</button>
-                            <button type="button" class="btn food" id="d-4">Frühstück 4</button>
-                            <button type="button" class="btn food" id="d-5">Frühstück 5</button>
-                            <button type="button" class="btn food" id="d-6">Frühstück 6</button>
-                            <button type="button" class="btn food" id="d-7">Frühstück 7</button>
-                            <button type="button" class="btn food" id="d-8">Frühstück 8</button>
-                            <button type="button" class="btn food" id="d-9">Frühstück 9</button>
+                            <button type="button" class="btn food">Frühstück 1</button>
+                            <button type="button" class="btn food">Frühstück 2</button>
+                            <button type="button" class="btn food">Frühstück 3</button>
+                            <button type="button" class="btn food">Frühstück 4</button>
+                            <button type="button" class="btn food">Frühstück 5</button>
+                            <button type="button" class="btn food">Frühstück 6</button>
+                            <button type="button" class="btn food">Frühstück 7</button>
+                            <button type="button" class="btn food">Frühstück 8</button>
+                            <button type="button" class="btn food">Frühstück 9</button>
                         </div>
                 </div>
                 </div>
             </div>
-            <div class="col-6 col-md-6 col-lg-6 ">
+            <!-------------------------------- right side --------------------------------->
+            <div class="col-12 col-md-6 col-lg-6 ">
                 <div class="row right">
                     <div class="row right-up">
+                        <!------- title of right side ---------->
                         <div class="row r-up right-up-row" id="right-up-1">
                             <div class="col-6 col-md-6 col-lg-6">
                                 <p>Artikel</p>
@@ -54,33 +57,23 @@
                                 </div>  
                             </div>
                         </div>
+                         <!-------- ordered foods display here --------->
+                        <!-------- ordered foods display here --------->
                         <div class="row" id="right-up-2">
                             <!-- add id=data_save for delete Button -->
-                            <div id="data_save">
-                                <div class="row">
-                                    <div class="col-lg-6 data-1">
-                                        <div>
-                                            <p class="data" id="data-1"></p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 grid-count-price data-2">
-                                        <div>
-                                            <p class="dataCount" id="countNum"></p>
-                                        </div>
-                                        <div>
-                                            <p class="data" id="price"></p>
-                                        </div>
-                                    </div> 
-                                </div>
+                            <div class="ordered-foods" id="data_save">
+                                <!-- render ordered foods here -->
                             </div>
                         </div>
+                        <!----------- display Total Price here --------->
                         <div class="row r-up right-up-row" id="right-up-3">
                             <div id="right-up-4">
                                 <p class="sum">Summe</p>
-                                <p class="prise">€</p>
+                                <p class="sum-price">0€</p>
                             </div>
                         </div>
                     </div>
+                        <!---------------- Calculate area ---------------->
                     <div class="row right-down">
                         <div class="container-2">
                             <div class="grid-3">
@@ -96,14 +89,17 @@
                                 <button type="button" class="btn btn-num zero">0</button>
                                 <button type="button" class="btn btn-num doublezero">00</button>
                                 <button type="button" class="btn btn-num c" id="c">c</button>
-                                <button type="button" class="btn btn-num delete" id="del" onclick= del()>X<br>Stornieren</button>
+                                <!------------- delete button ------------>
+                                <button type="button" class="btn btn-num delete" id="del" onclick= del()><a class="del" href="">X<br><span>Stornieren</span></a></button>
+                                <!---------- purchased button ------------>
                                 <button type="submit" class="btn btn-num done" id="done" onclick= openPopup()>Fertig</button>
                             </div>
-                            <!-- popup message -->
-                            <div class="popup" id="popup">
-                                <h2>Wollen Sie wirklich, dass dieser Bestellung aufgegeben wird?</h2>
-                                <p>Gesamtsumme: 19.69€</p>
-                                <button type="button" class="btn btn-ok"><a href="./">Ja</a></button>
+                           <!---------------------------- popup message ---------------------------->
+                           <div class="popup" id="popup">
+                                <h2 class="pb-3">Wollen Sie wirklich, dass dieser Bestellung aufgegeben wird?</h2>
+                                <p class="sumPopup-item pb-2"></p>
+                                <p class="sumPopup pb-2">Gesamtsumme: 0€</p>
+                                <button type="button" class="btn btn-ok"><a href="">Ja</a></button>
                                 <button type="button" class="btn btn-cancle" onclick= closePopup()>Nein</button>
                             </div>
                         </div>

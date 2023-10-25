@@ -17,8 +17,9 @@
 /* Responsive Container for small devices */
 @media only screen and (max-width: 800px) {
     .container {
-        width: 360px;
+        width: 349px;
         background: linear-gradient(to top, #e2dddd 50%, #ffffff 50%);
+        
     }
 }
 
@@ -223,7 +224,7 @@
 
 /* --------------------------- popup message -----------------------------------*/
 .popup {
-    width: 350px;
+    width: 340px;
     background-color: #e2dddd;
     border-radius: 8px;
     position: absolute;

@@ -13,11 +13,10 @@ const sumPopupEl = document.querySelector(".sumPopup");
 // Add SELECTED FOODS TO POPUP
 const sumPopupItemEl = document.querySelector(".sumPopup-item");
 
-// CHANGE NUMBER TO SEVEN
 
 
 
-// RENDER FOODS
+// ...........................RENDER FOODS....................................
 function renderProducts() {
   // fetch JSON
   let http = new XMLHttpRequest();
@@ -39,10 +38,65 @@ function renderProducts() {
 renderProducts();
 
 
+// .............................RENDER ORDERED FOODS..............................
+function renderOrderedFoods() {
+  // fetch JSON
+  let http = new XMLHttpRequest();
+  http.open('get', 'data.json', true);
+  http.send();
+  http.onload = function(){
+  if(this.readyState == 4 && this.status == 200){
+    let data = JSON.parse(this.responseText);
+
+    orderedFoodsEl.innerHTML = "";  //clear orders (order area), to prevent duplicate items
+    sumPopupItemEl.innerHTML = "";
+
+    order.forEach((food) => {
+     orderedFoodsEl.innerHTML += `
+       <div class="row">
+         <div class="col-lg-6 col-6 data-1">
+             <div>
+                 <p class="data" id="data-name">${food.name}</p>
+             </div>
+         </div>
+         <div class="col-lg-6 col-6 grid-count-price data-2">
+             <div>
+                 <p class="dataCount" id="countNum">${food.numberOfFoods}</p>
+             </div>
+             <div>
+                 <p class="data" id="price">${food.price}€</p>
+             </div>
+         </div> 
+       </div>
+     `
+     // Add SELECTED FOODS TO POPUP
+     sumPopupItemEl.innerHTML += `
+     <div class="row">
+     <div class="col-lg-6 col-6 data-1">
+         <div>
+             <p class="data" id="data-name">${food.name}</p>
+         </div>
+     </div>
+     <div class="col-lg-6 col-6 grid-count-price data-2">
+         <div>
+             <p class="dataCount" id="countNum">${food.numberOfFoods}</p>
+         </div>
+         <div>
+             <p class="data" id="price">${food.price}€</p>
+         </div>
+     </div> 
+   </div>`
+        
+   })
+  }    
+ }  
+}
+
+
+// ..........................ADD TO ORDER WHEN THE BUTTON IS CLICKED................................
 //ORDER ARRAY
 let order = [];
 
-// ADD TO ORDER
 function addToOrder(id) {
   // fetch JSON
   let http = new XMLHttpRequest();
@@ -79,7 +133,28 @@ function updateOrder() {
 }
 
 
-//CALCULATE AND RENDER TOTAL PRICE
+//.................INCREASE THE NUMBER OF SELECTED FOODS EVERY TIME THE BUTTON IS CLICKED (LEFT SIDE)...................
+function changeNumberOfFoods(action, id) {
+  order = order.map((food) => {
+    let numberOfFoods = food.numberOfFoods;
+
+    if (food.id === id) {
+    //Maximum number of items available are 9
+      if (action === "plus" && numberOfFoods < food.amount) {
+        numberOfFoods++;
+      }
+    }
+    return {
+      ...food,
+      numberOfFoods
+    };
+  });
+
+  updateOrder()
+}
+
+
+//.................................. CALCULATE AND RENDER TOTAL PRICE ............................
 function renderSumPrice() {
 
   let http = new XMLHttpRequest();
@@ -103,91 +178,14 @@ function renderSumPrice() {
 }
 
 
-// RENDER ORDERED FOODS
-function renderOrderedFoods() {
-   // fetch JSON
-   let http = new XMLHttpRequest();
-   http.open('get', 'data.json', true);
-   http.send();
-   http.onload = function(){
-   if(this.readyState == 4 && this.status == 200){
-     let data = JSON.parse(this.responseText);
-
-     orderedFoodsEl.innerHTML = "";  //clear orders (order area), to prevent duplicate items
-     sumPopupItemEl.innerHTML = "";
-
-     order.forEach((food) => {
-      orderedFoodsEl.innerHTML += `
-        <div class="row">
-          <div class="col-lg-6 col-6 data-1">
-              <div>
-                  <p class="data" id="data-name">${food.name}</p>
-              </div>
-          </div>
-          <div class="col-lg-6 col-6 grid-count-price data-2">
-              <div>
-                  <p class="dataCount" id="countNum">${food.numberOfFoods}</p>
-              </div>
-              <div>
-                  <p class="data" id="price">${food.price}€</p>
-              </div>
-          </div> 
-        </div>
-      `
-      // Add SELECTED FOODS TO POPUP
-      sumPopupItemEl.innerHTML += `
-      <div class="row">
-      <div class="col-lg-6 col-6 data-1">
-          <div>
-              <p class="data" id="data-name">${food.name}</p>
-          </div>
-      </div>
-      <div class="col-lg-6 col-6 grid-count-price data-2">
-          <div>
-              <p class="dataCount" id="countNum">${food.numberOfFoods}</p>
-          </div>
-          <div>
-              <p class="data" id="price">${food.price}€</p>
-          </div>
-      </div> 
-    </div>`
-         
-    })
-   }    
-  } 
-  
-}
-
-
-//INCREASE THE NUMBER OF SELECTED FOODS
-function changeNumberOfFoods(action, id) {
-  order = order.map((food) => {
-    let numberOfFoods = food.numberOfFoods;
-
-    if (food.id === id) {
-    //Maximale Anzahl der verfügbaren Getränke sind 9
-      if (action === "plus" && numberOfFoods < food.amount) {
-        numberOfFoods++;
-      }
-    }
-    return {
-      ...food,
-      numberOfFoods
-    };
-  });
-
-  updateOrder()
-}
-
-
-// DELETE ALL DATAS
+//...... DELETE ALL SELECTED ITEMS ON THE SCREEN AND TOTAL PRICE CHANGE TO ZERO........
 del = () => {
   orderedFoodsEl.innerText = " ",
   sumPriceEl.innerText = "0€"
 }
 
 
-// POPUP MESSAGE
+//............................. POPUP MESSAGE ...................................
 let popup = document.getElementById("popup")
 
 function openPopup() {
@@ -200,7 +198,7 @@ function closePopup() {
 
 
 
-// ACTIVE NAVBAR
+//........................ ACTIVE NAVBAR .....................................
 const pathName = window.location.pathname;
 const pageName = pathName.split("/").pop();
 

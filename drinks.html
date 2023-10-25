@@ -15,6 +15,7 @@
 <body>
     <div class="container">
         <div class="row">
+            <!------------------------------ left side ------------------------------------>
             <div class="col-12 col-md-6 col-lg-6">
                 <div class="left">
                     <div class="row nav">
@@ -29,12 +30,14 @@
                         <div class= "col-4 col-lg-6 grid foods" id="food_drinks">
                             <!-- render foods here -->
                         </div>
-                </div>
+                    </div>
                 </div>
             </div>
+            <!-------------------------------- right side --------------------------------->
             <div class="col-12 col-md-6 col-lg-6 ">
                 <div class="row right">
                     <div class="row right-up">
+                        <!------- title of right side ---------->
                         <div class="row r-up right-up-row" id="right-up-1">
                             <div class="col-6 col-md-6 col-lg-6">
                                 <p>Artikel</p>
@@ -46,12 +49,14 @@
                                 </div>  
                             </div>
                         </div>
+                        <!-------- ordered foods display here --------->
                         <div class="row" id="right-up-2">
                             <!-- add id=data_save for delete Button -->
                             <div class="ordered-foods" id="data_save">
                                 <!-- render ordered foods here -->
                             </div>
                         </div>
+                        <!----------- display Total Price here --------->
                         <div class="row r-up right-up-row" id="right-up-3">
                             <div id="right-up-4">
                                 <p class="sum">Summe</p>
@@ -59,10 +64,11 @@
                             </div>
                         </div>
                     </div>
+                        <!---------------- Calculate area ---------------->
                     <div class="row right-down">
                         <div class="container-2">
                             <div class="grid-3">
-                                <button type="button" class="btn btn-num seven" onclick="addToOrderSeven()">7</button>
+                                <button type="button" class="btn btn-num seven">7</button>
                                 <button type="button" class="btn btn-num eight">8</button>
                                 <button type="button" class="btn btn-num nine">9</button>
                                 <button type="button" class="btn btn-num four">4</button>
@@ -74,10 +80,13 @@
                                 <button type="button" class="btn btn-num zero">0</button>
                                 <button type="button" class="btn btn-num doublezero">00</button>
                                 <button type="button" class="btn btn-num c" id="c">c</button>
+                                <!------------- delete button ------------>
                                 <button type="button" class="btn btn-num delete" id="del" onclick= del()><a class="del" href="">X<br><span>Stornieren</span></a></button>
+                                <!---------- purchased button ------------>
                                 <button type="submit" class="btn btn-num done" id="done" onclick= openPopup()>Fertig</button>
                             </div>
-                            <!-- popup message -->
+                            
+                            <!---------------------------- popup message ---------------------------->
                             <div class="popup" id="popup">
                                 <h2 class="pb-3">Wollen Sie wirklich, dass dieser Bestellung aufgegeben wird?</h2>
                                 <p class="sumPopup-item pb-2"></p>
